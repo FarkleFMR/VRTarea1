@@ -3,13 +3,21 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 /[Ll]ibrary/
-/My project(1)/[Ll]ibrary/
+/Myproject/[Ll]ibrary/
 /[Tt]emp/
+/Myproject/[Tt]emp/
 /[Oo]bj/
+/Myproject/[Oo]bj/
 /[Bb]uild/
+/Myproject/[Bb]uild/
 /[Bb]uilds/
+/Myproject/[Bb]uilds/
 /[Ll]ogs/
+/Myproject/[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/Myproject/[Uu]ser[Ss]ettings/
+/Myproject/asd_BackUpThisFolder_ButDontShipItWithYourGame/
+/Myproject/asd_BurstDebugInformation_DoNotShip/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
