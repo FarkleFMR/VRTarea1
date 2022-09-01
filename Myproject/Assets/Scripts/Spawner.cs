@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameObject objectSpawn;
+    [SerializeField] private GameObject Gun;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
-        Instantiate(objectSpawn,transform.position, transform.rotation);
+        Gun.GetComponentInChildren<SimpleShoot>().bulletPrefab = objectSpawn;
     }
 }
