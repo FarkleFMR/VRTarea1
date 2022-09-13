@@ -8,6 +8,7 @@ public class SimpleShoot : MonoBehaviour
     [Header("Prefab Refrences")]
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
+    public GameObject iconPrefab;
     public GameObject muzzleFlashPrefab;
 
     [Header("Location Refrences")]
@@ -66,7 +67,15 @@ public class SimpleShoot : MonoBehaviour
         { return; }
 
         // Create a bullet and add force on it in direction of the barrel
-        Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+        GameObject tempBullet =  Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
+        tempBullet.GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+        
+        
+        if (!iconPrefab)
+        { return; }
+        GameObject tempIcon =  Instantiate(iconPrefab);
+        tempIcon.GetComponent<AnchorUI>().objectToFollow = tempBullet.transform;
+        
 
     }
 
